@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Dom Event</title>
+    <style>
+        img {
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="handler-text">handler event text</h1>
+    <img id="boy-img" src="images/DreamShaper_v5_A_curious_child_named_Namta_sitting_under_a_tre_2.jpg" alt="">
+    <button onclick="img()">Next</button>
+    <button id="previous-btn">previous </button>
+    <br>
+    <br>
+    <button onclick="handler()">click me</button>
+
+    <script>
+        function handler() {
+            const handlerText = document.getElementById('handler-text');
+            handlerText.innerText = 'this is new text'
+
+        }
+
+        function img() {
+            const changeImg = document.getElementById('boy-img');
+            changeImg.src = 'images/DreamShaper_v5_panda_ai_saifai_3.jpg';
+
+        }
+
+
+    </script>
+</body>
+
+</html>
