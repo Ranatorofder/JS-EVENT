@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Box</title>
+</head>
+
+<body>
+    <h1>This is comment box</h1>
+    <p id="input-text-display">this text is changes</p>
+    <input id="input-fild" type="text">
+    <button id="button-update">Update</button>
+
+    <script>
+        document.getElementById('button-update').addEventListener('click', function () {
+            const inputFild = document.getElementById('input-fild');
+            const inputText = inputFild.value;
+            const p = document.getElementById('input-text-display');
+            p.innerText = inputText;
+            inputFild.value = '';
+
+        })
+
+    </script>
+</body>
+
+</html>
