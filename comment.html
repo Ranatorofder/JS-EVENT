@@ -8,8 +8,8 @@
 </head>
 
 <body>
-    <div>
-        <h1>Please add your comment</h1>
+
+    <div id="comment-container">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, provident accusantium cum, minima
             praesentium, harum eligendi itaque perferendis omnis molestias maiores sequi non dicta! Voluptatum, deleniti
             iure perferendis nesciunt enim rem nostrum autem? Quasi eos qui aliquam, quidem modi id eum eligendi
@@ -30,7 +30,13 @@
 
     <script>
         document.getElementById('button-post').addEventListener('click', function () {
-
+            const newComment = document.getElementById('new-comment');
+            const comment = newComment.value;
+            const commentContainer = document.getElementById('comment-container');
+            const p = document.createElement('p');
+            p.innerText = comment;
+            commentContainer.appendChild(p);
+            newComment.value = '';
         })
     </script>
 </body>
